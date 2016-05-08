@@ -1,0 +1,1084 @@
+<?xml version="1.0" ?>
+<EntitySet Version="7">
+	<Entities>
+		<Entity>
+			<Discriminator>
+				<AllowNull>False</AllowNull>
+				<ColumnName />
+				<DiscriminatorType>Column</DiscriminatorType>
+				<Force>False</Force>
+				<Formula />
+				<Insert>True</Insert>
+			</Discriminator>
+			<Key keytype="Properties">
+				<Properties>
+					<Property>HolidayId</Property>
+				</Properties>
+			</Key>
+			<Name>Holiday</Name>
+			<Schema>Dbo</Schema>
+			<DiscriminatorValue />
+			<IsAbstract>False</IsAbstract>
+			<Parent />
+			<Generator>
+				<ClassName>assigned</ClassName>
+				<Parameters />
+			</Generator>
+			<Cache usage="None" include="All" region="" />
+			<Properties>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>ActualDate</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>DateTime</Type>
+					<NHibernateType>DateTime</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>HolidayDate</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>DateTime</Type>
+					<NHibernateType>DateTime</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>True</IsKey>
+					<Name>HolidayId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>6</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>HolidayName</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+			</Properties>
+			<VirtualProperties />
+		</Entity>
+		<Entity>
+			<Discriminator>
+				<AllowNull>False</AllowNull>
+				<ColumnName />
+				<DiscriminatorType>Column</DiscriminatorType>
+				<Force>False</Force>
+				<Formula />
+				<Insert>True</Insert>
+			</Discriminator>
+			<Key keytype="Properties">
+				<Properties>
+					<Property>EmpLeaveId</Property>
+				</Properties>
+			</Key>
+			<Name>LeaveAllowance</Name>
+			<Schema>Dbo</Schema>
+			<DiscriminatorValue />
+			<IsAbstract>False</IsAbstract>
+			<Parent />
+			<Generator>
+				<ClassName>assigned</ClassName>
+				<Parameters />
+			</Generator>
+			<Cache usage="None" include="All" region="" />
+			<Properties>
+				<Property>
+					<IsKey>True</IsKey>
+					<Name>EmpLeaveId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>6</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>LeaveRemaining</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>int</Type>
+					<NHibernateType>Int32</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+						<IntegerDigits>10</IntegerDigits>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>LeaveTypeId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>2</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>UserId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>6</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+			</Properties>
+			<VirtualProperties />
+		</Entity>
+		<Entity>
+			<Discriminator>
+				<AllowNull>False</AllowNull>
+				<ColumnName />
+				<DiscriminatorType>Column</DiscriminatorType>
+				<Force>False</Force>
+				<Formula />
+				<Insert>True</Insert>
+			</Discriminator>
+			<Key keytype="Properties">
+				<Properties>
+					<Property>LeaveRequestId</Property>
+				</Properties>
+			</Key>
+			<Name>LeaveRequest</Name>
+			<Schema>Dbo</Schema>
+			<DiscriminatorValue />
+			<IsAbstract>False</IsAbstract>
+			<Parent />
+			<Generator>
+				<ClassName>assigned</ClassName>
+				<Parameters />
+			</Generator>
+			<Cache usage="None" include="All" region="" />
+			<Properties>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>Attachment</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>byte[]</Type>
+					<NHibernateType>BinaryBlob</NHibernateType>
+					<Validation>
+						<Nullable>True</Nullable>
+						<MaximumLength>2147483647</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>FromDate</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>DateTime</Type>
+					<NHibernateType>DateTime</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>IsFirstHaft</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>bool?</Type>
+					<NHibernateType>Boolean</NHibernateType>
+					<Validation>
+						<Nullable>True</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>IsHaftDay</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>bool?</Type>
+					<NHibernateType>Boolean</NHibernateType>
+					<Validation>
+						<Nullable>True</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>IsSecondHaft</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>bool?</Type>
+					<NHibernateType>Boolean</NHibernateType>
+					<Validation>
+						<Nullable>True</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>LeaveDescription</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>True</IsKey>
+					<Name>LeaveRequestId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>10</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>LeaveTypeId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>2</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>RequestStatus</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>short</Type>
+					<NHibernateType>Int16</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+						<IntegerDigits>5</IntegerDigits>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>ToDate</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>DateTime</Type>
+					<NHibernateType>DateTime</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>UserId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>6</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>UseUserId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>6</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+			</Properties>
+			<VirtualProperties />
+		</Entity>
+		<Entity>
+			<Discriminator>
+				<AllowNull>False</AllowNull>
+				<ColumnName />
+				<DiscriminatorType>Column</DiscriminatorType>
+				<Force>False</Force>
+				<Formula />
+				<Insert>True</Insert>
+			</Discriminator>
+			<Key keytype="Properties">
+				<Properties>
+					<Property>PermissionId</Property>
+				</Properties>
+			</Key>
+			<Name>Permission</Name>
+			<Schema>Dbo</Schema>
+			<DiscriminatorValue />
+			<IsAbstract>False</IsAbstract>
+			<Parent />
+			<Generator>
+				<ClassName>assigned</ClassName>
+				<Parameters />
+			</Generator>
+			<Cache usage="None" include="All" region="" />
+			<Properties>
+				<Property>
+					<IsKey>True</IsKey>
+					<Name>PermissionId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>6</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>PermissionName</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>True</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+			</Properties>
+			<VirtualProperties />
+		</Entity>
+		<Entity>
+			<Discriminator>
+				<AllowNull>False</AllowNull>
+				<ColumnName />
+				<DiscriminatorType>Column</DiscriminatorType>
+				<Force>False</Force>
+				<Formula />
+				<Insert>True</Insert>
+			</Discriminator>
+			<Key keytype="Properties">
+				<Properties>
+					<Property>RoleId</Property>
+				</Properties>
+			</Key>
+			<Name>Role</Name>
+			<Schema>Dbo</Schema>
+			<DiscriminatorValue />
+			<IsAbstract>False</IsAbstract>
+			<Parent />
+			<Generator>
+				<ClassName>assigned</ClassName>
+				<Parameters />
+			</Generator>
+			<Cache usage="None" include="All" region="" />
+			<Properties>
+				<Property>
+					<IsKey>True</IsKey>
+					<Name>RoleId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>4</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>RoleName</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>UserId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>6</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+			</Properties>
+			<VirtualProperties />
+		</Entity>
+		<Entity>
+			<Discriminator>
+				<AllowNull>False</AllowNull>
+				<ColumnName />
+				<DiscriminatorType>Column</DiscriminatorType>
+				<Force>False</Force>
+				<Formula />
+				<Insert>True</Insert>
+			</Discriminator>
+			<Key keytype="Properties">
+				<Properties>
+					<Property>TimeId</Property>
+				</Properties>
+			</Key>
+			<Name>Timming</Name>
+			<Schema>Dbo</Schema>
+			<DiscriminatorValue />
+			<IsAbstract>False</IsAbstract>
+			<Parent />
+			<Generator>
+				<ClassName>assigned</ClassName>
+				<Parameters />
+			</Generator>
+			<Cache usage="None" include="All" region="" />
+			<Properties>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>Comments</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>True</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>Day</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>DateTime</Type>
+					<NHibernateType>DateTime</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>ManualIn</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>DateTime?</Type>
+					<NHibernateType>DateTime</NHibernateType>
+					<Validation>
+						<Nullable>True</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>ManualOut</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>DateTime?</Type>
+					<NHibernateType>DateTime</NHibernateType>
+					<Validation>
+						<Nullable>True</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>Submit</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>bool?</Type>
+					<NHibernateType>Boolean</NHibernateType>
+					<Validation>
+						<Nullable>True</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>True</IsKey>
+					<Name>TimeId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>6</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>TimeIn</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>DateTime</Type>
+					<NHibernateType>DateTime</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>TimeOut</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>DateTime</Type>
+					<NHibernateType>DateTime</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>UserId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>6</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+			</Properties>
+			<VirtualProperties />
+		</Entity>
+		<Entity>
+			<Discriminator>
+				<AllowNull>False</AllowNull>
+				<ColumnName />
+				<DiscriminatorType>Column</DiscriminatorType>
+				<Force>False</Force>
+				<Formula />
+				<Insert>True</Insert>
+			</Discriminator>
+			<Key keytype="Properties">
+				<Properties>
+					<Property>LeaveTypeId</Property>
+				</Properties>
+			</Key>
+			<Name>TypeOfLeave</Name>
+			<Schema>Dbo</Schema>
+			<DiscriminatorValue />
+			<IsAbstract>False</IsAbstract>
+			<Parent />
+			<Generator>
+				<ClassName>assigned</ClassName>
+				<Parameters />
+			</Generator>
+			<Cache usage="None" include="All" region="" />
+			<Properties>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>AllowanceLeave</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>int</Type>
+					<NHibernateType>Int32</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+						<IntegerDigits>10</IntegerDigits>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>Description</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>ExpiredDate</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>DateTime?</Type>
+					<NHibernateType>DateTime</NHibernateType>
+					<Validation>
+						<Nullable>True</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>IsPaid</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>bool?</Type>
+					<NHibernateType>Boolean</NHibernateType>
+					<Validation>
+						<Nullable>True</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>True</IsKey>
+					<Name>LeaveTypeId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>2</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>Name</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>StartedDate</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>DateTime</Type>
+					<NHibernateType>DateTime</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+			</Properties>
+			<VirtualProperties />
+		</Entity>
+		<Entity>
+			<Discriminator>
+				<AllowNull>False</AllowNull>
+				<ColumnName />
+				<DiscriminatorType>Column</DiscriminatorType>
+				<Force>False</Force>
+				<Formula />
+				<Insert>True</Insert>
+			</Discriminator>
+			<Key keytype="Properties">
+				<Properties>
+					<Property>UserId</Property>
+				</Properties>
+			</Key>
+			<Name>User</Name>
+			<Schema>Dbo</Schema>
+			<DiscriminatorValue />
+			<IsAbstract>False</IsAbstract>
+			<Parent />
+			<Generator>
+				<ClassName>assigned</ClassName>
+				<Parameters />
+			</Generator>
+			<Cache usage="None" include="All" region="" />
+			<Properties>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>Address</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>True</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>ContactPhone</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>True</Nullable>
+						<MaximumLength>11</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>DayOfBirth</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>DateTime</Type>
+					<NHibernateType>DateTime</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>EmailAddr</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>FirstName</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>HolidayId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>6</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>JoinDate</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>DateTime</Type>
+					<NHibernateType>DateTime</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>LastName</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>Level</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>3</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>PassWord</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>16</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>False</IsKey>
+					<Name>Possition</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>0</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+				<Property>
+					<IsKey>True</IsKey>
+					<Name>UserId</Name>
+					<IsHiddenByAbstractParent>False</IsHiddenByAbstractParent>
+					<IsPartOfHiddenKey>False</IsPartOfHiddenKey>
+					<ReadOnly>False</ReadOnly>
+					<Type>string</Type>
+					<NHibernateType>String</NHibernateType>
+					<Validation>
+						<Nullable>False</Nullable>
+						<MaximumLength>6</MaximumLength>
+					</Validation>
+					<VirtualProperties />
+				</Property>
+			</Properties>
+			<VirtualProperties />
+		</Entity>
+	</Entities>
+	<References>
+		<Reference identifier="3b64ea3d-834f-42d0-a906-bfc49e383c71">
+			<Cardinality1 min="2147483647" max="2147483647" />
+			<End1Enabled>True</End1Enabled>
+			<End1Name>Users</End1Name>
+			<Entity1>Holiday</Entity1>
+			<IncludeForeignKey>False</IncludeForeignKey>
+			<Cardinality2 min="1" max="1" />
+			<End2Enabled>True</End2Enabled>
+			<End2Name>Holiday</End2Name>
+			<Entity2>User</Entity2>
+			<VirtualProperties />
+		</Reference>
+		<Reference identifier="31ca673f-3adc-460a-9512-f8eb5c80fd0c">
+			<Cardinality1 min="2147483647" max="2147483647" />
+			<End1Enabled>True</End1Enabled>
+			<End1Name>Roles</End1Name>
+			<Entity1>Permission</Entity1>
+			<IncludeForeignKey>False</IncludeForeignKey>
+			<Cardinality2 min="2147483647" max="2147483647" />
+			<End2Enabled>True</End2Enabled>
+			<End2Name>Permissions</End2Name>
+			<Entity2>Role</Entity2>
+			<VirtualProperties />
+		</Reference>
+		<Reference identifier="842d9447-a126-40d2-aaed-f2fa868620a2">
+			<Cardinality1 min="2147483647" max="2147483647" />
+			<End1Enabled>True</End1Enabled>
+			<End1Name>LeaveAllowances</End1Name>
+			<Entity1>TypeOfLeave</Entity1>
+			<IncludeForeignKey>False</IncludeForeignKey>
+			<Cardinality2 min="1" max="1" />
+			<End2Enabled>True</End2Enabled>
+			<End2Name>TypeOfLeave</End2Name>
+			<Entity2>LeaveAllowance</Entity2>
+			<VirtualProperties />
+		</Reference>
+		<Reference identifier="edc1280a-c166-456b-b266-736849a5c24c">
+			<Cardinality1 min="2147483647" max="2147483647" />
+			<End1Enabled>True</End1Enabled>
+			<End1Name>LeaveRequests</End1Name>
+			<Entity1>TypeOfLeave</Entity1>
+			<IncludeForeignKey>False</IncludeForeignKey>
+			<Cardinality2 min="1" max="1" />
+			<End2Enabled>True</End2Enabled>
+			<End2Name>TypeOfLeave</End2Name>
+			<Entity2>LeaveRequest</Entity2>
+			<VirtualProperties />
+		</Reference>
+		<Reference identifier="8ee1045b-f978-4e35-a18a-7363c4dea59e">
+			<Cardinality1 min="2147483647" max="2147483647" />
+			<End1Enabled>True</End1Enabled>
+			<End1Name>LeaveAllowances</End1Name>
+			<Entity1>User</Entity1>
+			<IncludeForeignKey>False</IncludeForeignKey>
+			<Cardinality2 min="1" max="1" />
+			<End2Enabled>True</End2Enabled>
+			<End2Name>User</End2Name>
+			<Entity2>LeaveAllowance</Entity2>
+			<VirtualProperties />
+		</Reference>
+		<Reference identifier="770da80c-0d21-457a-8ad9-69a64824e6f2">
+			<Cardinality1 min="2147483647" max="2147483647" />
+			<End1Enabled>True</End1Enabled>
+			<End1Name>LeaveRequests</End1Name>
+			<Entity1>User</Entity1>
+			<IncludeForeignKey>False</IncludeForeignKey>
+			<Cardinality2 min="1" max="1" />
+			<End2Enabled>True</End2Enabled>
+			<End2Name>User</End2Name>
+			<Entity2>LeaveRequest</Entity2>
+			<VirtualProperties />
+		</Reference>
+		<Reference identifier="f4750c51-c03b-4b11-913c-2dfc6ee9bfb0">
+			<Cardinality1 min="2147483647" max="2147483647" />
+			<End1Enabled>True</End1Enabled>
+			<End1Name>LeaveRequests1</End1Name>
+			<Entity1>User</Entity1>
+			<IncludeForeignKey>False</IncludeForeignKey>
+			<Cardinality2 min="1" max="1" />
+			<End2Enabled>True</End2Enabled>
+			<End2Name>User1</End2Name>
+			<Entity2>LeaveRequest</Entity2>
+			<VirtualProperties />
+		</Reference>
+		<Reference identifier="45460334-4b74-4952-ba6a-371100e27617">
+			<Cardinality1 min="2147483647" max="2147483647" />
+			<End1Enabled>True</End1Enabled>
+			<End1Name>Roles</End1Name>
+			<Entity1>User</Entity1>
+			<IncludeForeignKey>False</IncludeForeignKey>
+			<Cardinality2 min="1" max="1" />
+			<End2Enabled>True</End2Enabled>
+			<End2Name>User</End2Name>
+			<Entity2>Role</Entity2>
+			<VirtualProperties />
+		</Reference>
+		<Reference identifier="0d8ff49e-c3f8-422a-bee0-ba36d2eb3ae6">
+			<Cardinality1 min="2147483647" max="2147483647" />
+			<End1Enabled>True</End1Enabled>
+			<End1Name>Timmings</End1Name>
+			<Entity1>User</Entity1>
+			<IncludeForeignKey>False</IncludeForeignKey>
+			<Cardinality2 min="1" max="1" />
+			<End2Enabled>True</End2Enabled>
+			<End2Name>User</End2Name>
+			<Entity2>Timming</Entity2>
+			<VirtualProperties />
+		</Reference>
+	</References>
+</EntitySet>

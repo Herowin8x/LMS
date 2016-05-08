@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<nhv-mapping assembly="Library" namespace="Library.Model" xmlns="urn:nhibernate-validator-1.0">
+	<class name="LeaveRequest">
+		<property name="FromDate">
+			<not-null />
+		</property>
+		<property name="LeaveDescription">
+			<not-null />
+		</property>
+		<property name="LeaveRequestId">
+			<not-null />
+		</property>
+		<property name="RequestStatus">
+			<not-null />
+			<digits integerDigits="5" />
+		</property>
+		<property name="ToDate">
+			<not-null />
+		</property>
+	</class>
+</nhv-mapping>

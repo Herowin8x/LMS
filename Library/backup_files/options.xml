@@ -1,0 +1,56 @@
+<Options>
+  <_C_x0023___>
+    <VisualStudioVersion>VS_2010</VisualStudioVersion>
+    <UseSubNamespaceForSchemas>True</UseSubNamespaceForSchemas>
+    <GeneratePartialClasses>True</GeneratePartialClasses>
+  </_C_x0023___>
+  <_Database_Prefixes__x0026__Suffixes__ />
+  <_General__>
+    <ReferenceTemplate>public virtual #reference.Type# #reference.Name#
+{
+	get;
+	#reference.SetterIsPrivate ? "private "#set;
+}</ReferenceTemplate>
+    <ProjectNamespace>Library</ProjectNamespace>
+    <ProjectName>Library</ProjectName>
+    <ProjectGuid>8bf625cd-22a7-499b-a497-4d7709fb9bed</ProjectGuid>
+  </_General__>
+  <_NHibernate__>
+    <UseSpatial>False</UseSpatial>
+    <UsePrivateSettersOnProperties>False</UsePrivateSettersOnProperties>
+    <UseFluentNHibernate>False</UseFluentNHibernate>
+    <NHibernateVersion>v2</NHibernateVersion>
+    <DefaultLazy>True</DefaultLazy>
+    <DefaultInverse>True</DefaultInverse>
+    <DefaultCollectionLazy>True</DefaultCollectionLazy>
+    <DefaultCollectionCascade>none</DefaultCollectionCascade>
+    <DefaultCascade>none</DefaultCascade>
+    <DefaultAccess>property</DefaultAccess>
+    <AutoImport>True</AutoImport>
+  </_NHibernate__>
+  <_NHibernate_Config__>
+    <UseProxyValidator>
+    </UseProxyValidator>
+    <UseOuterJoin>false</UseOuterJoin>
+    <TransactionFactoryClass>
+    </TransactionFactoryClass>
+    <ShowSql>
+    </ShowSql>
+    <QuerySubstitutions>
+    </QuerySubstitutions>
+    <MaxFetchDepth>
+    </MaxFetchDepth>
+    <GenerateStatistics>
+    </GenerateStatistics>
+    <CacheUserQueryCache>
+    </CacheUserQueryCache>
+    <CacheUserMinimalPuts>false</CacheUserMinimalPuts>
+    <CacheRegionPrefix>
+    </CacheRegionPrefix>
+    <CacheQueryCacheFactory>
+    </CacheQueryCacheFactory>
+    <CacheProviderClass>
+    </CacheProviderClass>
+    <BytecodeGenerator>DynamicProxy</BytecodeGenerator>
+  </_NHibernate_Config__>
+</Options>

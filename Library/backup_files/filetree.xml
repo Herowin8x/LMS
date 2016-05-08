@@ -1,0 +1,63 @@
+<Options version="1">
+  <CheckedFiles>
+    <File checked="True">Properties</File>
+    <File checked="True" intellimerge="Overwrite">Properties\AssemblyInfo.cs</File>
+    <File checked="True">Model</File>
+    <File checked="True">Model\Mappings</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\Holiday.hbm.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\LeaveAllowance.hbm.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\LeaveRequest.hbm.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\Permission.hbm.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\Role.hbm.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\Timming.hbm.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\TypeOfLeave.hbm.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\User.hbm.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\Holiday.nhv.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\LeaveAllowance.nhv.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\LeaveRequest.nhv.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\Permission.nhv.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\Role.nhv.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\Timming.nhv.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\TypeOfLeave.nhv.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Mappings\User.nhv.xml</File>
+    <File checked="True" intellimerge="Overwrite">Model\Holiday.cs</File>
+    <File checked="True" intellimerge="Overwrite">Model\LeaveAllowance.cs</File>
+    <File checked="True" intellimerge="Overwrite">Model\LeaveRequest.cs</File>
+    <File checked="True" intellimerge="Overwrite">Model\Permission.cs</File>
+    <File checked="True" intellimerge="Overwrite">Model\Role.cs</File>
+    <File checked="True" intellimerge="Overwrite">Model\Timming.cs</File>
+    <File checked="True" intellimerge="Overwrite">Model\TypeOfLeave.cs</File>
+    <File checked="True" intellimerge="Overwrite">Model\User.cs</File>
+    <File checked="True" intellimerge="Overwrite">Model\Validation.cs</File>
+    <File checked="True">Libraries</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\Antlr3.Runtime.dll</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\Castle.Core.dll</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\Castle.Core.xml</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\Castle.DynamicProxy.license.txt</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\Castle.DynamicProxy2.dll</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\Castle.DynamicProxy2.xml</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\Iesi.Collections.dll</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\Iesi.Collections.pdb</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\Iesi.Collections.xml</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\log4net.dll</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\log4net.license.txt</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\NHibernate.ByteCode.Castle.dll</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\NHibernate.ByteCode.Castle.pdb</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\NHibernate.ByteCode.Castle.xml</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\NHibernate.dll</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\NHibernate.pdb</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\NHibernate.Validator.dll</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\NHibernate.Validator.xml</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\NHibernate.xml</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\nhibernate-configuration.xsd</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\nhibernate-mapping.xsd</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\nunit.framework.dll</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\nunit.framework.xml</File>
+    <File checked="True" intellimerge="Overwrite">Libraries\log4net.xml</File>
+    <File checked="True" intellimerge="Overwrite">nhvalidator.cfg.xml</File>
+    <File checked="True" intellimerge="Overwrite">hibernate.cfg.xml</File>
+    <File checked="True" intellimerge="Overwrite">Library.sln</File>
+    <File checked="True" intellimerge="Overwrite">Library.csproj</File>
+    <File checked="True" intellimerge="Overwrite">SessionManager.cs</File>
+  </CheckedFiles>
+</Options>

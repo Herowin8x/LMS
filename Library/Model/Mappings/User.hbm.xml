@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Library.Model" assembly="Library" xmlns="urn:nhibernate-mapping-2.2">
+	<class name="User" table="`User`" schema="`dbo`">
+		<id name="UserId" access="property" column="`userID`" length="6">
+			<generator class="assigned" />
+		</id>
+		<property name="Address" type="String" column="`address`" />
+		<property name="ContactPhone" type="String" column="`contactPhone`" length="11" />
+		<property name="DayOfBirth" type="DateTime" column="`dayOfBirth`" />
+		<property name="EmailAddr" type="String" column="`emailAddr`" />
+		<property name="FirstName" type="String" column="`firstName`" />
+		<property name="JoinDate" type="DateTime" column="`joinDate`" />
+		<property name="LastName" type="String" column="`lastName`" />
+		<property name="Level" type="String" column="`level`" length="3" />
+		<property name="PassWord" type="String" column="`passWord`" length="16" />
+		<property name="Possition" type="String" column="`possition`" />
+		<many-to-one name="Holiday" class="Holiday" column="`holidayID`" not-null="true" fetch="select" />
+		<set name="LeaveAllowances" inverse="true">
+			<key column="`userID`" />
+			<one-to-many class="LeaveAllowance" />
+		</set>
+		<set name="LeaveRequests" inverse="true">
+			<key column="`Use_userID`" />
+			<one-to-many class="LeaveRequest" />
+		</set>
+		<set name="Roles" inverse="true">
+			<key column="`userID`" />
+			<one-to-many class="Role" />
+		</set>
+		<set name="Timmings" inverse="true">
+			<key column="`userID`" />
+			<one-to-many class="Timming" />
+		</set>
+	</class>
+</hibernate-mapping>

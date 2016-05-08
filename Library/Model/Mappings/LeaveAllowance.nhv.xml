@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<nhv-mapping assembly="Library" namespace="Library.Model" xmlns="urn:nhibernate-validator-1.0">
+	<class name="LeaveAllowance">
+		<property name="EmpLeaveId">
+			<not-null />
+		</property>
+		<property name="LeaveRemaining">
+			<not-null />
+			<digits integerDigits="10" />
+		</property>
+	</class>
+</nhv-mapping>

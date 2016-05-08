@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<nhv-mapping assembly="Library" namespace="Library.Model" xmlns="urn:nhibernate-validator-1.0">
+	<class name="Holiday">
+		<property name="ActualDate">
+			<not-null />
+		</property>
+		<property name="HolidayDate">
+			<not-null />
+		</property>
+		<property name="HolidayId">
+			<not-null />
+		</property>
+		<property name="HolidayName">
+			<not-null />
+		</property>
+	</class>
+</nhv-mapping>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Library.Model.LeaveRequest>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Summary</h2>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LeaveRequestId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeOfLeave)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FromDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LeaveDescription)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeaveRequestId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeOfLeave)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FromDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeaveDescription)
+            </td>
+        </tr>
+    }
+
+</table>
+

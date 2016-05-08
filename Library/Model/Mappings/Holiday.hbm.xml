@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Library.Model" assembly="Library" xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Holiday" table="`Holiday`" schema="`dbo`">
+		<id name="HolidayId" access="property" column="`holidayID`" length="6">
+			<generator class="assigned" />
+		</id>
+		<property name="ActualDate" type="DateTime" column="`actualDate`" />
+		<property name="HolidayDate" type="DateTime" column="`holidayDate`" />
+		<property name="HolidayName" type="String" column="`holidayName`" />
+		<set name="Users" inverse="true">
+			<key column="`holidayID`" />
+			<one-to-many class="User" />
+		</set>
+	</class>
+</hibernate-mapping>

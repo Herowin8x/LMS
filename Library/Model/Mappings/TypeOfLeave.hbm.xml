@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Library.Model" assembly="Library" xmlns="urn:nhibernate-mapping-2.2">
+	<class name="TypeOfLeave" table="`Type_Of_Leave`" schema="`dbo`">
+		<id name="LeaveTypeId" access="property" column="`leaveTypeID`" length="2">
+			<generator class="assigned" />
+		</id>
+		<property name="AllowanceLeave" type="Int32" column="`allowanceLeave`" />
+		<property name="Description" type="String" column="`description`" />
+		<property name="ExpiredDate" type="DateTime" column="`expiredDate`" />
+		<property name="IsPaid" type="Boolean" column="`isPaid`" />
+		<property name="Name" type="String" column="`name`" />
+		<property name="StartedDate" type="DateTime" column="`startedDate`" />
+		<set name="LeaveAllowances" inverse="true">
+			<key column="`leaveTypeID`" />
+			<one-to-many class="LeaveAllowance" />
+		</set>
+		<set name="LeaveRequests" inverse="true">
+			<key column="`leaveTypeID`" />
+			<one-to-many class="LeaveRequest" />
+		</set>
+	</class>
+</hibernate-mapping>

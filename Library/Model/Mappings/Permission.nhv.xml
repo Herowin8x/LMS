@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<nhv-mapping assembly="Library" namespace="Library.Model" xmlns="urn:nhibernate-validator-1.0">
+	<class name="Permission">
+		<property name="PermissionId">
+			<not-null />
+		</property>
+	</class>
+</nhv-mapping>

@@ -1,0 +1,4 @@
+<Project>
+	<ProviderFolder>ArchAngel_NHibernateHelper_data</ProviderFolder>
+	<ProviderFolder>ArchAngel_Providers_EntityModel_data</ProviderFolder>
+</Project>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Library.Model" assembly="Library" xmlns="urn:nhibernate-mapping-2.2">
+	<class name="LeaveRequest" table="`Leave_Request`" schema="`dbo`">
+		<id name="LeaveRequestId" access="property" column="`leaveRequestID`" length="10">
+			<generator class="assigned" />
+		</id>
+		<property name="Attachment" type="BinaryBlob" column="`attachment`" />
+		<property name="FromDate" type="DateTime" column="`fromDate`" />
+		<property name="IsFirstHaft" type="Boolean" column="`isFirstHaft`" />
+		<property name="IsHaftDay" type="Boolean" column="`isHaftDay`" />
+		<property name="IsSecondHaft" type="Boolean" column="`isSecondHaft`" />
+		<property name="LeaveDescription" type="String" column="`leaveDescription`" />
+		<property name="RequestStatus" type="Int16" column="`requestStatus`" />
+		<property name="ToDate" type="DateTime" column="`toDate`" />
+		<many-to-one name="TypeOfLeave" class="TypeOfLeave" column="`leaveTypeID`" not-null="true" fetch="select" />
+	</class>
+</hibernate-mapping>

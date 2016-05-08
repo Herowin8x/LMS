@@ -1,0 +1,1993 @@
+<?xml version="1.0" ?>
+<LogicalSchema Version="1">
+	<ConnectionInformation DatabaseConnector="SqlServer2005">
+		<ServerName>ACER</ServerName>
+		<DatabaseName>LMS</DatabaseName>
+		<UseIntegratedSecurity>True</UseIntegratedSecurity>
+		<Port>1433</Port>
+	</ConnectionInformation>
+	<DatabaseName>LMS</DatabaseName>
+	<DatabaseType>SQLServer2005</DatabaseType>
+	<Table>
+		<Description />
+		<Enabled>True</Enabled>
+		<IsUserDefined>False</IsUserDefined>
+		<Name>Holiday</Name>
+		<Schema>dbo</Schema>
+		<Keys>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_HOLIDAY</Name>
+				<Schema />
+				<Keytype>Primary</Keytype>
+				<IsUnique>True</IsUnique>
+				<Columns>
+					<ColumnName>holidayID</ColumnName>
+				</Columns>
+			</Key>
+		</Keys>
+		<Indexes>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_HOLIDAY</Name>
+				<Schema />
+				<Datatype>PrimaryKey</Datatype>
+				<IsUnique>True</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>holidayID</ColumnName>
+				</Columns>
+			</Index>
+		</Indexes>
+		<Columns>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>holidayID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>True</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>True</IsUnique>
+				<OrdinalPosition>1</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>6</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>holidayName</Name>
+				<Schema />
+				<Datatype>text</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>2</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>holidayDate</Name>
+				<Schema />
+				<Datatype>datetime</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>3</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>actualDate</Name>
+				<Schema />
+				<Datatype>datetime</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>4</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+		</Columns>
+	</Table>
+	<Table>
+		<Description />
+		<Enabled>True</Enabled>
+		<IsUserDefined>False</IsUserDefined>
+		<Name>Leave_Allowance</Name>
+		<Schema>dbo</Schema>
+		<Keys>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_LEAVE_ALLOWANCE</Name>
+				<Schema />
+				<Keytype>Primary</Keytype>
+				<IsUnique>True</IsUnique>
+				<Columns>
+					<ColumnName>empLeaveID</ColumnName>
+				</Columns>
+			</Key>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_LEAVE_AL_HAS LEAVE_USER</Name>
+				<Schema />
+				<Keytype>Foreign</Keytype>
+				<IsUnique>False</IsUnique>
+				<ReferencedKey>
+					<KeyName>PK_USER</KeyName>
+					<TableName>User</TableName>
+					<Schema>dbo</Schema>
+				</ReferencedKey>
+				<Columns>
+					<ColumnName>userID</ColumnName>
+				</Columns>
+			</Key>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_LEAVE_AL_TYPE AND _TYPE_OF_</Name>
+				<Schema />
+				<Keytype>Foreign</Keytype>
+				<IsUnique>False</IsUnique>
+				<ReferencedKey>
+					<KeyName>PK_TYPE_OF_LEAVE</KeyName>
+					<TableName>Type_Of_Leave</TableName>
+					<Schema>dbo</Schema>
+				</ReferencedKey>
+				<Columns>
+					<ColumnName>leaveTypeID</ColumnName>
+				</Columns>
+			</Key>
+		</Keys>
+		<Indexes>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_LEAVE_AL_HAS LEAVE_USER</Name>
+				<Schema />
+				<Datatype>ForeignKey</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>userID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_LEAVE_AL_TYPE AND _TYPE_OF_</Name>
+				<Schema />
+				<Datatype>ForeignKey</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>leaveTypeID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>has leave alowance_FK</Name>
+				<Schema />
+				<Datatype>None</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>userID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_LEAVE_ALLOWANCE</Name>
+				<Schema />
+				<Datatype>PrimaryKey</Datatype>
+				<IsUnique>True</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>empLeaveID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>type and leave allowance_FK</Name>
+				<Schema />
+				<Datatype>None</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>leaveTypeID</ColumnName>
+				</Columns>
+			</Index>
+		</Indexes>
+		<Columns>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>empLeaveID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>True</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>True</IsUnique>
+				<OrdinalPosition>1</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>6</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>userID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>2</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>6</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>leaveTypeID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>3</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>2</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>leaveRemaining</Name>
+				<Schema />
+				<Datatype>int</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>4</OrdinalPosition>
+				<Precision>10</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+		</Columns>
+	</Table>
+	<Table>
+		<Description />
+		<Enabled>True</Enabled>
+		<IsUserDefined>False</IsUserDefined>
+		<Name>Leave_Request</Name>
+		<Schema>dbo</Schema>
+		<Keys>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_LEAVE_REQUEST</Name>
+				<Schema />
+				<Keytype>Primary</Keytype>
+				<IsUnique>True</IsUnique>
+				<Columns>
+					<ColumnName>leaveRequestID</ColumnName>
+				</Columns>
+			</Key>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_LEAVE_RE_APPROVE O_USER</Name>
+				<Schema />
+				<Keytype>Foreign</Keytype>
+				<IsUnique>False</IsUnique>
+				<ReferencedKey>
+					<KeyName>PK_USER</KeyName>
+					<TableName>User</TableName>
+					<Schema>dbo</Schema>
+				</ReferencedKey>
+				<Columns>
+					<ColumnName>Use_userID</ColumnName>
+				</Columns>
+			</Key>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_LEAVE_RE_RAISE LEA_USER</Name>
+				<Schema />
+				<Keytype>Foreign</Keytype>
+				<IsUnique>False</IsUnique>
+				<ReferencedKey>
+					<KeyName>PK_USER</KeyName>
+					<TableName>User</TableName>
+					<Schema>dbo</Schema>
+				</ReferencedKey>
+				<Columns>
+					<ColumnName>userID</ColumnName>
+				</Columns>
+			</Key>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_LEAVE_RE_TYPE OF L_TYPE_OF_</Name>
+				<Schema />
+				<Keytype>Foreign</Keytype>
+				<IsUnique>False</IsUnique>
+				<ReferencedKey>
+					<KeyName>PK_TYPE_OF_LEAVE</KeyName>
+					<TableName>Type_Of_Leave</TableName>
+					<Schema>dbo</Schema>
+				</ReferencedKey>
+				<Columns>
+					<ColumnName>leaveTypeID</ColumnName>
+				</Columns>
+			</Key>
+		</Keys>
+		<Indexes>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>approve or reject Request_FK</Name>
+				<Schema />
+				<Datatype>None</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>Use_userID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_LEAVE_RE_APPROVE O_USER</Name>
+				<Schema />
+				<Datatype>ForeignKey</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>Use_userID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_LEAVE_RE_RAISE LEA_USER</Name>
+				<Schema />
+				<Datatype>ForeignKey</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>userID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_LEAVE_RE_TYPE OF L_TYPE_OF_</Name>
+				<Schema />
+				<Datatype>ForeignKey</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>leaveTypeID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_LEAVE_REQUEST</Name>
+				<Schema />
+				<Datatype>PrimaryKey</Datatype>
+				<IsUnique>True</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>leaveRequestID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>raise leave_FK</Name>
+				<Schema />
+				<Datatype>None</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>userID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>type of leave_FK</Name>
+				<Schema />
+				<Datatype>None</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>leaveTypeID</ColumnName>
+				</Columns>
+			</Index>
+		</Indexes>
+		<Columns>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>leaveRequestID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>True</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>True</IsUnique>
+				<OrdinalPosition>1</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>10</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>userID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>2</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>6</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>leaveTypeID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>3</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>2</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>Use_userID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>4</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>6</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>fromDate</Name>
+				<Schema />
+				<Datatype>datetime</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>5</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>toDate</Name>
+				<Schema />
+				<Datatype>datetime</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>6</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>isHaftDay</Name>
+				<Schema />
+				<Datatype>bit</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>True</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>7</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>isFirstHaft</Name>
+				<Schema />
+				<Datatype>bit</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>True</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>8</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>isSecondHaft</Name>
+				<Schema />
+				<Datatype>bit</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>True</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>9</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>attachment</Name>
+				<Schema />
+				<Datatype>image</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>True</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>10</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>2147483647</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>requestStatus</Name>
+				<Schema />
+				<Datatype>smallint</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>11</OrdinalPosition>
+				<Precision>5</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>leaveDescription</Name>
+				<Schema />
+				<Datatype>text</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>12</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+		</Columns>
+	</Table>
+	<Table>
+		<Description />
+		<Enabled>True</Enabled>
+		<IsUserDefined>False</IsUserDefined>
+		<Name>Permission</Name>
+		<Schema>dbo</Schema>
+		<Keys>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_PERMISSION</Name>
+				<Schema />
+				<Keytype>Primary</Keytype>
+				<IsUnique>True</IsUnique>
+				<Columns>
+					<ColumnName>permissionID</ColumnName>
+				</Columns>
+			</Key>
+		</Keys>
+		<Indexes>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_PERMISSION</Name>
+				<Schema />
+				<Datatype>PrimaryKey</Datatype>
+				<IsUnique>True</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>permissionID</ColumnName>
+				</Columns>
+			</Index>
+		</Indexes>
+		<Columns>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>permissionID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>True</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>True</IsUnique>
+				<OrdinalPosition>1</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>6</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>permissionName</Name>
+				<Schema />
+				<Datatype>text</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>True</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>2</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+		</Columns>
+	</Table>
+	<Table>
+		<Description />
+		<Enabled>True</Enabled>
+		<IsUserDefined>False</IsUserDefined>
+		<Name>Role</Name>
+		<Schema>dbo</Schema>
+		<Keys>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_ROLE</Name>
+				<Schema />
+				<Keytype>Primary</Keytype>
+				<IsUnique>True</IsUnique>
+				<Columns>
+					<ColumnName>roleID</ColumnName>
+				</Columns>
+			</Key>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_ROLE_ROLE OF U_USER</Name>
+				<Schema />
+				<Keytype>Foreign</Keytype>
+				<IsUnique>False</IsUnique>
+				<ReferencedKey>
+					<KeyName>PK_USER</KeyName>
+					<TableName>User</TableName>
+					<Schema>dbo</Schema>
+				</ReferencedKey>
+				<Columns>
+					<ColumnName>userID</ColumnName>
+				</Columns>
+			</Key>
+		</Keys>
+		<Indexes>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_ROLE_ROLE OF U_USER</Name>
+				<Schema />
+				<Datatype>ForeignKey</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>userID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_ROLE</Name>
+				<Schema />
+				<Datatype>PrimaryKey</Datatype>
+				<IsUnique>True</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>roleID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>role of user_FK</Name>
+				<Schema />
+				<Datatype>None</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>userID</ColumnName>
+				</Columns>
+			</Index>
+		</Indexes>
+		<Columns>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>roleID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>True</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>True</IsUnique>
+				<OrdinalPosition>1</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>4</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>userID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>2</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>6</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>roleName</Name>
+				<Schema />
+				<Datatype>text</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>3</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+		</Columns>
+	</Table>
+	<Table>
+		<Description />
+		<Enabled>True</Enabled>
+		<IsUserDefined>False</IsUserDefined>
+		<Name>RoleAndPermission</Name>
+		<Schema>dbo</Schema>
+		<Keys>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_ROLEANDPERMISSION</Name>
+				<Schema />
+				<Keytype>Primary</Keytype>
+				<IsUnique>True</IsUnique>
+				<Columns>
+					<ColumnName>rolePermissionID</ColumnName>
+				</Columns>
+			</Key>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_ROLEANDP_HAVE IN R_PERMISSI</Name>
+				<Schema />
+				<Keytype>Foreign</Keytype>
+				<IsUnique>False</IsUnique>
+				<ReferencedKey>
+					<KeyName>PK_PERMISSION</KeyName>
+					<TableName>Permission</TableName>
+					<Schema>dbo</Schema>
+				</ReferencedKey>
+				<Columns>
+					<ColumnName>permissionID</ColumnName>
+				</Columns>
+			</Key>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_ROLEANDP_PERMISSIO_ROLE</Name>
+				<Schema />
+				<Keytype>Foreign</Keytype>
+				<IsUnique>False</IsUnique>
+				<ReferencedKey>
+					<KeyName>PK_ROLE</KeyName>
+					<TableName>Role</TableName>
+					<Schema>dbo</Schema>
+				</ReferencedKey>
+				<Columns>
+					<ColumnName>roleID</ColumnName>
+				</Columns>
+			</Key>
+		</Keys>
+		<Indexes>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_ROLEANDP_HAVE IN R_PERMISSI</Name>
+				<Schema />
+				<Datatype>ForeignKey</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>permissionID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_ROLEANDP_PERMISSIO_ROLE</Name>
+				<Schema />
+				<Datatype>ForeignKey</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>roleID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>have in role_FK</Name>
+				<Schema />
+				<Datatype>None</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>permissionID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>Permissions of roll_FK</Name>
+				<Schema />
+				<Datatype>None</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>roleID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_ROLEANDPERMISSION</Name>
+				<Schema />
+				<Datatype>PrimaryKey</Datatype>
+				<IsUnique>True</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>rolePermissionID</ColumnName>
+				</Columns>
+			</Index>
+		</Indexes>
+		<Columns>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>rolePermissionID</Name>
+				<Schema />
+				<Datatype>numeric</Datatype>
+				<Default />
+				<InPrimaryKey>True</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>True</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>True</IsUnique>
+				<OrdinalPosition>1</OrdinalPosition>
+				<Precision>18</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>roleID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>2</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>4</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>permissionID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>3</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>6</Size>
+			</Column>
+		</Columns>
+	</Table>
+	<Table>
+		<Description />
+		<Enabled>True</Enabled>
+		<IsUserDefined>False</IsUserDefined>
+		<Name>Timming</Name>
+		<Schema>dbo</Schema>
+		<Keys>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_TIMMING</Name>
+				<Schema />
+				<Keytype>Primary</Keytype>
+				<IsUnique>True</IsUnique>
+				<Columns>
+					<ColumnName>timeID</ColumnName>
+				</Columns>
+			</Key>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_TIMMING_TIMING_USER</Name>
+				<Schema />
+				<Keytype>Foreign</Keytype>
+				<IsUnique>False</IsUnique>
+				<ReferencedKey>
+					<KeyName>PK_USER</KeyName>
+					<TableName>User</TableName>
+					<Schema>dbo</Schema>
+				</ReferencedKey>
+				<Columns>
+					<ColumnName>userID</ColumnName>
+				</Columns>
+			</Key>
+		</Keys>
+		<Indexes>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_TIMMING_TIMING_USER</Name>
+				<Schema />
+				<Datatype>ForeignKey</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>userID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_TIMMING</Name>
+				<Schema />
+				<Datatype>PrimaryKey</Datatype>
+				<IsUnique>True</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>timeID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>timing_FK</Name>
+				<Schema />
+				<Datatype>None</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>userID</ColumnName>
+				</Columns>
+			</Index>
+		</Indexes>
+		<Columns>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>timeID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>True</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>True</IsUnique>
+				<OrdinalPosition>1</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>6</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>userID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>2</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>6</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>day</Name>
+				<Schema />
+				<Datatype>datetime</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>3</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>timeIn</Name>
+				<Schema />
+				<Datatype>datetime</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>4</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>timeOut</Name>
+				<Schema />
+				<Datatype>datetime</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>5</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>manualIn</Name>
+				<Schema />
+				<Datatype>datetime</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>True</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>6</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>manualOut</Name>
+				<Schema />
+				<Datatype>datetime</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>True</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>7</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>comments</Name>
+				<Schema />
+				<Datatype>text</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>True</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>8</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>submit</Name>
+				<Schema />
+				<Datatype>bit</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>True</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>9</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+		</Columns>
+	</Table>
+	<Table>
+		<Description />
+		<Enabled>True</Enabled>
+		<IsUserDefined>False</IsUserDefined>
+		<Name>Type_Of_Leave</Name>
+		<Schema>dbo</Schema>
+		<Keys>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_TYPE_OF_LEAVE</Name>
+				<Schema />
+				<Keytype>Primary</Keytype>
+				<IsUnique>True</IsUnique>
+				<Columns>
+					<ColumnName>leaveTypeID</ColumnName>
+				</Columns>
+			</Key>
+		</Keys>
+		<Indexes>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_TYPE_OF_LEAVE</Name>
+				<Schema />
+				<Datatype>PrimaryKey</Datatype>
+				<IsUnique>True</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>leaveTypeID</ColumnName>
+				</Columns>
+			</Index>
+		</Indexes>
+		<Columns>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>leaveTypeID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>True</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>True</IsUnique>
+				<OrdinalPosition>1</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>2</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>name</Name>
+				<Schema />
+				<Datatype>text</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>2</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>description</Name>
+				<Schema />
+				<Datatype>text</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>3</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>allowanceLeave</Name>
+				<Schema />
+				<Datatype>int</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>4</OrdinalPosition>
+				<Precision>10</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>isPaid</Name>
+				<Schema />
+				<Datatype>bit</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>True</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>5</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>startedDate</Name>
+				<Schema />
+				<Datatype>datetime</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>6</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>expiredDate</Name>
+				<Schema />
+				<Datatype>datetime</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>True</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>7</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+		</Columns>
+	</Table>
+	<Table>
+		<Description />
+		<Enabled>True</Enabled>
+		<IsUserDefined>False</IsUserDefined>
+		<Name>User</Name>
+		<Schema>dbo</Schema>
+		<Keys>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_USER</Name>
+				<Schema />
+				<Keytype>Primary</Keytype>
+				<IsUnique>True</IsUnique>
+				<Columns>
+					<ColumnName>userID</ColumnName>
+				</Columns>
+			</Key>
+			<Key>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_USER_MODIFY PU_HOLIDAY</Name>
+				<Schema />
+				<Keytype>Foreign</Keytype>
+				<IsUnique>False</IsUnique>
+				<ReferencedKey>
+					<KeyName>PK_HOLIDAY</KeyName>
+					<TableName>Holiday</TableName>
+					<Schema>dbo</Schema>
+				</ReferencedKey>
+				<Columns>
+					<ColumnName>holidayID</ColumnName>
+				</Columns>
+			</Key>
+		</Keys>
+		<Indexes>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>FK_USER_MODIFY PU_HOLIDAY</Name>
+				<Schema />
+				<Datatype>ForeignKey</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>holidayID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>modify public holiday_FK</Name>
+				<Schema />
+				<Datatype>None</Datatype>
+				<IsUnique>False</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>holidayID</ColumnName>
+				</Columns>
+			</Index>
+			<Index>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>PK_USER</Name>
+				<Schema />
+				<Datatype>PrimaryKey</Datatype>
+				<IsUnique>True</IsUnique>
+				<IsClustered>False</IsClustered>
+				<Columns>
+					<ColumnName>userID</ColumnName>
+				</Columns>
+			</Index>
+		</Indexes>
+		<Columns>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>userID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>True</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>True</IsUnique>
+				<OrdinalPosition>1</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>6</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>holidayID</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>2</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>6</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>firstName</Name>
+				<Schema />
+				<Datatype>text</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>3</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>lastName</Name>
+				<Schema />
+				<Datatype>text</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>4</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>dayOfBirth</Name>
+				<Schema />
+				<Datatype>datetime</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>5</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>joinDate</Name>
+				<Schema />
+				<Datatype>datetime</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>6</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>contactPhone</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>True</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>7</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>11</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>address</Name>
+				<Schema />
+				<Datatype>text</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>True</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>8</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>possition</Name>
+				<Schema />
+				<Datatype>text</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>9</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>level</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>10</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>3</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>emailAddr</Name>
+				<Schema />
+				<Datatype>text</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>11</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>0</Size>
+			</Column>
+			<Column>
+				<Description />
+				<Enabled>True</Enabled>
+				<IsUserDefined>False</IsUserDefined>
+				<Name>passWord</Name>
+				<Schema />
+				<Datatype>char</Datatype>
+				<Default />
+				<InPrimaryKey>False</InPrimaryKey>
+				<IsCalculated>False</IsCalculated>
+				<IsComputed>False</IsComputed>
+				<IsIdentity>False</IsIdentity>
+				<IsNullable>False</IsNullable>
+				<IsReadOnly>False</IsReadOnly>
+				<IsUnique>False</IsUnique>
+				<OrdinalPosition>12</OrdinalPosition>
+				<Precision>0</Precision>
+				<Scale>0</Scale>
+				<Size>16</Size>
+			</Column>
+		</Columns>
+	</Table>
+	<Relationship identifier="49fcf020-fa3c-43c8-8e2a-e354e974f350">
+		<PrimaryTable>User</PrimaryTable>
+		<PrimarySchema>dbo</PrimarySchema>
+		<ForeignTable>Leave_Allowance</ForeignTable>
+		<ForeignSchema>dbo</ForeignSchema>
+		<PrimaryKey>PK_USER</PrimaryKey>
+		<ForeignKey>FK_LEAVE_AL_HAS LEAVE_USER</ForeignKey>
+		<Name>FK_LEAVE_AL_HAS LEAVE_USER</Name>
+	</Relationship>
+	<Relationship identifier="93e74517-6ea5-403b-ac9e-793b69188dd5">
+		<PrimaryTable>Type_Of_Leave</PrimaryTable>
+		<PrimarySchema>dbo</PrimarySchema>
+		<ForeignTable>Leave_Allowance</ForeignTable>
+		<ForeignSchema>dbo</ForeignSchema>
+		<PrimaryKey>PK_TYPE_OF_LEAVE</PrimaryKey>
+		<ForeignKey>FK_LEAVE_AL_TYPE AND _TYPE_OF_</ForeignKey>
+		<Name>FK_LEAVE_AL_TYPE AND _TYPE_OF_</Name>
+	</Relationship>
+	<Relationship identifier="ecac559d-5dee-4448-bfbc-732d8c15a226">
+		<PrimaryTable>User</PrimaryTable>
+		<PrimarySchema>dbo</PrimarySchema>
+		<ForeignTable>Leave_Request</ForeignTable>
+		<ForeignSchema>dbo</ForeignSchema>
+		<PrimaryKey>PK_USER</PrimaryKey>
+		<ForeignKey>FK_LEAVE_RE_APPROVE O_USER</ForeignKey>
+		<Name>FK_LEAVE_RE_APPROVE O_USER</Name>
+	</Relationship>
+	<Relationship identifier="39bc7aac-9c3a-4d41-acba-f884dd42127f">
+		<PrimaryTable>User</PrimaryTable>
+		<PrimarySchema>dbo</PrimarySchema>
+		<ForeignTable>Leave_Request</ForeignTable>
+		<ForeignSchema>dbo</ForeignSchema>
+		<PrimaryKey>PK_USER</PrimaryKey>
+		<ForeignKey>FK_LEAVE_RE_RAISE LEA_USER</ForeignKey>
+		<Name>FK_LEAVE_RE_RAISE LEA_USER</Name>
+	</Relationship>
+	<Relationship identifier="fe10cab4-6966-45ee-ba38-1597599a65a0">
+		<PrimaryTable>Type_Of_Leave</PrimaryTable>
+		<PrimarySchema>dbo</PrimarySchema>
+		<ForeignTable>Leave_Request</ForeignTable>
+		<ForeignSchema>dbo</ForeignSchema>
+		<PrimaryKey>PK_TYPE_OF_LEAVE</PrimaryKey>
+		<ForeignKey>FK_LEAVE_RE_TYPE OF L_TYPE_OF_</ForeignKey>
+		<Name>FK_LEAVE_RE_TYPE OF L_TYPE_OF_</Name>
+	</Relationship>
+	<Relationship identifier="eb5fd413-255a-4564-9225-e67d7edefe55">
+		<PrimaryTable>User</PrimaryTable>
+		<PrimarySchema>dbo</PrimarySchema>
+		<ForeignTable>Role</ForeignTable>
+		<ForeignSchema>dbo</ForeignSchema>
+		<PrimaryKey>PK_USER</PrimaryKey>
+		<ForeignKey>FK_ROLE_ROLE OF U_USER</ForeignKey>
+		<Name>FK_ROLE_ROLE OF U_USER</Name>
+	</Relationship>
+	<Relationship identifier="ac0eb1eb-5287-457a-aa42-9a970bf00781">
+		<PrimaryTable>Permission</PrimaryTable>
+		<PrimarySchema>dbo</PrimarySchema>
+		<ForeignTable>RoleAndPermission</ForeignTable>
+		<ForeignSchema>dbo</ForeignSchema>
+		<PrimaryKey>PK_PERMISSION</PrimaryKey>
+		<ForeignKey>FK_ROLEANDP_HAVE IN R_PERMISSI</ForeignKey>
+		<Name>FK_ROLEANDP_HAVE IN R_PERMISSI</Name>
+	</Relationship>
+	<Relationship identifier="83fb6518-8096-4c31-a602-34a3a1b413a9">
+		<PrimaryTable>Role</PrimaryTable>
+		<PrimarySchema>dbo</PrimarySchema>
+		<ForeignTable>RoleAndPermission</ForeignTable>
+		<ForeignSchema>dbo</ForeignSchema>
+		<PrimaryKey>PK_ROLE</PrimaryKey>
+		<ForeignKey>FK_ROLEANDP_PERMISSIO_ROLE</ForeignKey>
+		<Name>FK_ROLEANDP_PERMISSIO_ROLE</Name>
+	</Relationship>
+	<Relationship identifier="0805800e-1e7f-4f9c-9ddc-c292a018926e">
+		<PrimaryTable>User</PrimaryTable>
+		<PrimarySchema>dbo</PrimarySchema>
+		<ForeignTable>Timming</ForeignTable>
+		<ForeignSchema>dbo</ForeignSchema>
+		<PrimaryKey>PK_USER</PrimaryKey>
+		<ForeignKey>FK_TIMMING_TIMING_USER</ForeignKey>
+		<Name>FK_TIMMING_TIMING_USER</Name>
+	</Relationship>
+	<Relationship identifier="cfcca58d-7657-40a3-b077-45bdef5f34ba">
+		<PrimaryTable>Holiday</PrimaryTable>
+		<PrimarySchema>dbo</PrimarySchema>
+		<ForeignTable>User</ForeignTable>
+		<ForeignSchema>dbo</ForeignSchema>
+		<PrimaryKey>PK_HOLIDAY</PrimaryKey>
+		<ForeignKey>FK_USER_MODIFY PU_HOLIDAY</ForeignKey>
+		<Name>FK_USER_MODIFY PU_HOLIDAY</Name>
+	</Relationship>
+</LogicalSchema>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Library.Model" assembly="Library" xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Role" table="`Role`" schema="`dbo`">
+		<id name="RoleId" access="property" column="`roleID`" length="4">
+			<generator class="assigned" />
+		</id>
+		<property name="RoleName" type="String" column="`roleName`" />
+		<set name="Permissions" table="`RoleAndPermission`">
+			<key column="`roleID`" />
+			<many-to-many class="Permission" column="`permissionID`" />
+		</set>
+		<many-to-one name="User" class="User" column="`userID`" not-null="true" fetch="select" />
+	</class>
+</hibernate-mapping>

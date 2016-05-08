@@ -1,0 +1,137 @@
+﻿@model Library.Model.User
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Manage Personal Information</h2>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+
+<style>
+    [type~=date] {
+        position: relative;
+
+        width: 150px;
+        height: 30px;
+        color: white;
+    }
+
+        [type~=date]:before {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            content: attr(data-date);
+            display: inline-block;
+            color: black;
+        }
+
+        [type~=date]::-webkit-datetime-edit, [type~=date]::-webkit-inner-spin-button, [type~=date]::-webkit-clear-button {
+            display: none;
+        }
+
+        [type~=date]::-webkit-calendar-picker-indicator {
+            position: absolute;
+            top: 3px;
+            right: 0;
+            color: black;
+            opacity: 1;
+        }
+</style>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.UserId)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.DayOfBirth, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input id="birthDate" type="date" data-date-format="DD MMMM YYYY">
+                @Html.HiddenFor(model => model.DayOfBirth)
+            </div>
+            @Html.LabelFor(model => model.JoinDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input id="joinDate" type="date" data-date-format="DD MMMM YYYY">
+                @Html.HiddenFor(model => model.JoinDate)
+            </div>
+            @Html.LabelFor(model => model.ContactPhone, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ContactPhone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ContactPhone, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+            </div>
+
+            <!--If change a email or password auto logout to login page-->
+            @Html.LabelFor(model => model.EmailAddr, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EmailAddr, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EmailAddr, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.PassWord, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PassWord, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PassWord, "", new { @class = "text-danger" })
+            </div>
+            
+            @Html.HiddenFor(model => model.Holiday.HolidayId)
+            @Html.HiddenFor(model => model.Possition)
+            @Html.HiddenFor(model => model.Level)
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Details/" + @Model.UserId)
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script>
+    $(document).ready(function () {
+        var birthDate = @Html.Raw(Json.Encode(Model.DayOfBirth.ToString("yyyy-MM-dd")));
+        var joinDate = @Html.Raw(Json.Encode(Model.JoinDate.ToString("yyyy-MM-dd")));
+
+        //Set init time
+        $('#birthDate').val(birthDate);
+        $('#joinDate').val(joinDate);
+
+        $("#joinDate").on("change", function () {
+            this.setAttribute("data-date", moment(this.value, "YYYY-MM-DD").format(this.getAttribute("data-date-format")))
+            $("#JoinDate").val($('#joinDate').val());
+        }).trigger("change")
+
+        $("#birthDate").on("change", function () {
+            this.setAttribute("data-date", moment(this.value, "YYYY-MM-DD").format(this.getAttribute("data-date-format")))
+            $("#DayOfBirth").val($('#birthDate').val());
+        }).trigger("change")
+    });
+</script>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Library.Model" assembly="Library" xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Timming" table="`Timming`" schema="`dbo`">
+		<id name="TimeId" access="property" column="`timeID`" length="6">
+			<generator class="assigned" />
+		</id>
+		<property name="Comments" type="String" column="`comments`" />
+		<property name="Day" type="DateTime" column="`day`" />
+		<property name="ManualIn" type="DateTime" column="`manualIn`" />
+		<property name="ManualOut" type="DateTime" column="`manualOut`" />
+		<property name="Submit" type="Boolean" column="`submit`" />
+		<property name="TimeIn" type="DateTime" column="`timeIn`" />
+		<property name="TimeOut" type="DateTime" column="`timeOut`" />
+		<many-to-one name="User" class="User" column="`userID`" not-null="true" fetch="select" />
+	</class>
+</hibernate-mapping>

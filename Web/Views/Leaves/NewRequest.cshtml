@@ -1,0 +1,162 @@
+﻿@model Library.Model.User
+
+@{
+    ViewBag.Title = "New Request";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+
+<style>
+    #startDate {
+        position: relative;
+        width: 150px;
+        height: 30px;
+        color: white;
+    }
+
+        #startDate:before {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            content: attr(data-date);
+            display: inline-block;
+            color: black;
+        }
+
+        #startDate::-webkit-datetime-edit, #startDate::-webkit-inner-spin-button, #startDate::-webkit-clear-button {
+            display: none;
+        }
+
+        #startDate::-webkit-calendar-picker-indicator {
+            position: absolute;
+            top: 3px;
+            right: 0;
+            color: black;
+            opacity: 1;
+        }
+
+            #endDate {
+        position: relative;
+        width: 150px;
+        height: 30px;
+        color: white;
+    }
+
+        #endDate:before {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            content: attr(data-date);
+            display: inline-block;
+            color: black;
+        }
+
+        #endDate::-webkit-datetime-edit, #endDate::-webkit-inner-spin-button, #endDate::-webkit-clear-button {
+            display: none;
+        }
+
+        #endDate::-webkit-calendar-picker-indicator {
+            position: absolute;
+            top: 3px;
+            right: 0;
+            color: black;
+            opacity: 1;
+        }
+</style>
+
+<h2>Apply Leave</h2>
+
+<hr />
+
+<p align="right">
+    @Html.ActionLink("Leave Policy", "Policy")
+</p>
+<table>
+    <tr>
+        <td>
+            Type of Leave*: 
+        </td>
+        <td>
+            <select>
+                <option value="Annual Leave">---Select---</option>
+                <option value="Annual Leave">Annual Leave</option>
+                <option value="Business Reason">Business Reason</option>
+                <option value="Birthday Leave">Birthday Leave</option>
+                <option value="Children Care">Children Care</option>
+                <option value="Sick Leave">Sick Leave</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Start Date*:
+        </td>
+        <td><input id="startDate" type="date" data-date-format="DD MMMM YYYY"></td>
+    </tr>
+    <tr>
+        <td>
+            End Date*:
+        </td>
+        <td><input id="endDate" type="date" data-date-format="DD MMMM YYYY"></td>
+    </tr>
+    @*<tr>
+        <td>
+            Absent Days:
+        </td>
+        <td>
+            DropDown
+        </td>
+    </tr>*@
+    <tr>
+        <td>
+            Comments:
+        </td>
+        <td>
+            <textarea style="width: 400px; height: 150px">
+
+            </textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Attachment:
+        </td>
+        <td>
+            <input type="file" value="csd" /> <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            <p style="color:red">(Maximize file size up to 15MB)</p>
+        </td>
+    </tr>
+</table>
+<input type="button" value="Attach" />
+<br />
+<div>
+    <input type="button" value="Submit" />
+    <input type="button" value="Reset" />
+    <input type="button" value="Back" />
+</div>
+
+<script>
+            //Set init time
+        $('#startDate').val(moment().format('YYYY-MM-DD'));
+
+    $("#startDate").on("change", function () {
+            this.setAttribute("data-date", moment(this.value, "YYYY-MM-DD").format(this.getAttribute("data-date-format")))
+
+    }).trigger("change")
+
+    $('#endDate').val(moment().format('YYYY-MM-DD'));
+
+    $("#endDate").on("change", function () {
+        this.setAttribute("data-date", moment(this.value, "YYYY-MM-DD").format(this.getAttribute("data-date-format")))
+
+    }).trigger("change")
+</script>
+
